@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+</head>
+<body>
+    <h1>Update Student</h1>
+    <form action="/student/{{ to_update.student_id }}/update" method="POST" id="update-form">
+    <div>
+      <label>Roll Number:</label>
+      <input type="text" name="roll" value="{{ to_update.current_roll }}" disabled /><br><br>
+    </div>
+    <div>
+       <label>First Name:</label>
+       <input type="text" name="f_name" value="{{ to_update.current_f_name }}"required /><br><br>
+    </div>
+    <div>
+       <label>Last Name:</label>
+       <input type="text" name="l_name" value="{{ to_update.current_l_name }}"required/><br><br>
+    </div>
+    <div>
+       <label>Select Courses: </label>
+       <input type="checkbox" name="courses" value="1" />
+       <label>MAD I</label>
+       <input type="checkbox" name="courses" value="2" />
+       <label>DBMS</label>
+       <input type="checkbox" name="courses" value="3" />
+       <label>PDSA</label>
+       <input type="checkbox" name="courses" value="4" />
+       <label>BDM</label>
+    </div><br>
+    <div>
+       <input type="submit" value = "Submit">
+    </div>
+    </form>    
+</body>
+</html>
